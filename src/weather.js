@@ -20,10 +20,8 @@ function getWeatherData(data) {
     const description = data.days[0].description
     const pressure = data.days[0].pressure
     const humidity = data.days[0].humidity
-    const visibility = data.days[0].visibility
-    const tempmax = data.days[0].tempmax
-    const tempmin = data.days[0].tempmin
-    return { timezone, latitude, longitude, condition, description, pressure, humidity, visibility, tempmax, tempmin }
+    const temp = data.days[0].temp
+    return { timezone, latitude, longitude, condition, description, pressure, humidity, temp }
 }
 
-fetchWeatherData("fresno").then(data => console.log(data))
+fetchWeatherData("lagos").then(data => console.log(data))
