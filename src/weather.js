@@ -7,7 +7,8 @@ async function fetchWeatherData(location) {
         const data = await response.json()
         return getWeatherData(data)
     } catch(err) {
-        console.log(`An error occured while fetching required data from the API -> ${err}`)
+        console.error(`An error occured while fetching required data from the API -> ${err}`)
+        return;
     }
 }
 
@@ -25,4 +26,4 @@ function getWeatherData(data) {
     return { timezone, latitude, longitude, condition, description, pressure, humidity, visibility, tempmax, tempmin }
 }
 
-fetchWeatherData("paris").then(data => console.log(data))
+fetchWeatherData("fresno").then(data => console.log(data))
