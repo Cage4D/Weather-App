@@ -1,10 +1,14 @@
 
 async function fetchWeatherData(location) {
-    const key = "3VHSNTX2HAD5JRCZCWJL42ZWJ"
-    const searchURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`
-    const response = await fetch(searchURL)
-    const data = await response.json()
-    return getWeatherData(data)
+    try {
+        const key = "3VHSNTX2HAD5JRCZCWJL42ZWJ"
+        const searchURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`
+        const response = await fetch(searchURL)
+        const data = await response.json()
+        return getWeatherData(data)
+    } catch(err) {
+        console.log(`An error occured while fetching required data from the API -> ${err}`)
+    }
 }
 
 function getWeatherData(data) {
