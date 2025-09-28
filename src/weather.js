@@ -12,6 +12,7 @@ async function fetchWeatherData(location) {
 }
 
 function getWeatherData(data) {
+    const timezone = data.timezone
     const latitude = data.latitude
     const longitude = data.longitude
     const condition = data.days[0].conditions
@@ -19,7 +20,9 @@ function getWeatherData(data) {
     const pressure = data.days[0].pressure
     const humidity = data.days[0].humidity
     const visibility = data.days[0].visibility
-    return { latitude, longitude, condition, description, pressure, humidity, visibility }
+    const tempmax = data.days[0].tempmax
+    const tempmin = data.days[0].tempmin
+    return { timezone, latitude, longitude, condition, description, pressure, humidity, visibility, tempmax, tempmin }
 }
 
-fetchWeatherData("london").then(data => console.log(data))
+fetchWeatherData("paris").then(data => console.log(data))
