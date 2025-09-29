@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Frijole";
+    src: url("../../fonts/frijole-regular-webfont.woff2") format("woff2"),
+         url("../../fonts/frijole-regular-webfont.woff") format("woff");
+}
+
+.info {
+    color: var(--clr-white);
+    font-family: "Frijole", serif;
+}
+
+.info__location {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.info__location-name {
+    font-size: 1.2rem;
+}
+
+.info__temperature {
+    font-size: calc(var(--base) * 8);
+}
+
+.info__condition {
+    font-size: calc(var(--base) * 3);
+}
+
+.info__description {
+    width: 25ch;
+    font-size: calc(var(--base) * 1.5);
+}
