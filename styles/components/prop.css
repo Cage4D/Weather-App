@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Hanalei Fill";
+    src: url("../../fonts/hanaleifill-regular-webfont.woff2") format("woff2"),
+         url("../../fonts/hanaleifill-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Franklin Gothic Heavy";
+    src: url("../../fonts/franklin_gothic_heavy-webfont.woff2") format("woff2"),
+         url("../../fonts/franklin_gothic_heavy-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Iceland";
+    src: url("../../fonts/iceland-regular-webfont.woff2") format("woff2"),
+         url("../../fonts/iceland-regular-webfont.woff") format("woff");
+}
+
+
 .prop {
     display: flex;
     color: var(--clr-white);
