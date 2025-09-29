@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Eras";
+    src: url("../../fonts/eras_bold_itc-webfont.woff2") format("woff2"),
+         url("../../fonts/eras_bold_itc-webfont.woff") format("woff");
+}
+
+
+
 #navbar {
     display: flex;
     justify-content: center;
@@ -10,10 +18,9 @@
     width: calc(var(--base) * 20);
     height: calc(var(--base) + 1.8vh);
     background: none;
-    padding: 10px 0px 13px 30px;
+    padding: 10px 0px 12px 30px;
     color: var(--clr-white);
-    display: flex;
-    align-items: center;
+    font-family: "Eras", sans-serif;
 }
 
 #searchBar:focus {
@@ -23,6 +30,8 @@
 #searchBar::placeholder {
     color: var(--clr-white);
     opacity: 0.7;
+    font-family: "Eras", sans-serif;
+    font-size: small;
 }
 
 .navbar__wrapper {
