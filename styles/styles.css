@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: "Eras";
-    src: url("../../fonts/eras_bold_itc-webfont.woff2") format("woff2"),
-         url("../../fonts/eras_bold_itc-webfont.woff") format("woff");
+    src: url("../fonts/eras_bold_itc-webfont.woff2") format("woff2"),
+         url("../fonts/eras_bold_itc-webfont.woff") format("woff");
 }
 
 * {
