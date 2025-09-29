@@ -21,6 +21,7 @@
 
 .info__temperature {
     font-size: calc(var(--base) * 8);
+    letter-spacing: -5px;
 }
 
 .info__condition {
