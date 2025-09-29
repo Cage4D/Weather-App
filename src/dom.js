@@ -13,4 +13,4 @@ const domElements = (function() {
     return { input, location, temperature, condition, description, latitude, longitude, pressure, humidity }
 })()
 
-
+export default domElements
