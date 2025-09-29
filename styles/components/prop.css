@@ -1,0 +1,6 @@
+.prop {
+    display: flex;
+    color: var(--clr-white);
+    height: calc(var(--base) + 25vh);
+    gap: var(--base);
+}
