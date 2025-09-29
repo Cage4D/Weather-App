@@ -1,5 +1,5 @@
 
-async function fetchWeatherData(location) {
+export default async function fetchWeatherData(location) {
     try {
         const key = "3VHSNTX2HAD5JRCZCWJL42ZWJ"
         const searchURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`
@@ -24,4 +24,3 @@ function getWeatherData(data) {
     return { timezone, latitude, longitude, condition, description, pressure, humidity, temp }
 }
 
-fetchWeatherData("lagos").then(data => console.log(data))
