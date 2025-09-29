@@ -1,6 +1,7 @@
 :root {
   --clr-white: #ffffff;
   --base: 1rem;
+  --clr-gray: rgba(78, 78, 78, 0.35);
 }
 
 @font-face {
