@@ -38,4 +38,6 @@ button {
 body {
   height: 100vh;
   background: url("../img/cloudy.jpg") center center / cover no-repeat;
+  padding-left: calc(var(--base) * 5);
+  padding-right: calc(var(--base) * 5);
 }
