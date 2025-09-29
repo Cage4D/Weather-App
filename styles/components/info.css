@@ -4,9 +4,32 @@
          url("../../fonts/frijole-regular-webfont.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Franklin Gothic Medium";
+    src: url("../../fonts/franklin_gothic_medium-webfont.woff2") format("woff2"),
+         url("../../fonts/franklin_gothic_medium-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Audiowide";
+    src: url("../../fonts/audiowide-regular-webfont.woff2") format("woff2"),
+         url("../../fonts/audiowide-regular-webfont.woff") format("woff");
+}
+
 .info {
     color: var(--clr-white);
-    font-family: "Frijole", serif;
+}
+
+.info__cloudy {
+    font-family: "Frijole", sans-serif;
+}
+
+.info__sunny {
+    font-family: "Franklin Gothic Medium", sans-serif;
+}
+
+.info__rainy {
+    font-family: "Audiowide", sans-serif;
 }
 
 .info__location {
