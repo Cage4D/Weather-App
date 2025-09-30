@@ -22,3 +22,13 @@ async function handleInput(e) {
         alert("Enter in a valid City, State or Country")
     }
 }
+
+function checkWeatherCondition(condition, temp) {
+    let weatherCondition;
+    if (condition === 'Rain, Partially cloudy') {
+        weatherCondition = "Rainy"
+    } else if (condition === 'Partially cloudy') {
+        weatherCondition = cloudyOrSunny(temp)
+    }
+    return weatherCondition;
+}
