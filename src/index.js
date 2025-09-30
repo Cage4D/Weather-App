@@ -99,3 +99,13 @@ function updatePropClass(dom, condition) {
         element.classList.add(classToAdd)
     }
 }
+
+function changeBackgroundImg(background, condition) {
+    const backgrounds = {
+        "Cloudy": cloudy,
+        "Sunny": sunny,
+        "Rainy": rain,
+    }
+    const image = backgrounds[condition]
+    background.style.background = `url(${image}) center center /  cover no-repeat`
+}
