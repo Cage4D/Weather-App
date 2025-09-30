@@ -81,3 +81,21 @@ function updateInfoClass(dom, condition) {
         element.classList.add(classToAdd);
     }
 }
+
+function updatePropClass(dom, condition) {
+    const propClasses = ["prop__cloudy", "prop__sunny", "prop__rainy"]
+    const domElements = [dom.latitude, dom.longitude, dom.pressure, dom.humidity, dom.pText, dom.hText, dom.latText, dom.lonText]
+
+    for (const element of domElements) {
+        element.classList.remove(...propClasses)
+    }
+
+    let classToAdd;
+    if (condition === "Cloudy") classToAdd = "prop__cloudy"
+    else if (condition === "Sunny") classToAdd = "prop__sunny"
+    else classToAdd = "prop__rainy"
+
+    for (const element of domElements) {
+        element.classList.add(classToAdd)
+    }
+}
