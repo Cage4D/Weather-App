@@ -50,3 +50,16 @@ function description(text) {
         return "Cloudy throughout the day with periods of rain and possible thunderstorms"
     }
 }
+
+function updateDOM(data) {
+    const conditionLabel = checkWeatherCondition(data.condition, data.temp);
+    Dom.location.textContent = Dom.input.value
+    Dom.temperature.textContent = `${convertFarenheitToCelsius(data.temp)}°`
+    Dom.condition.textContent = conditionLabel
+    Dom.description.textContent = Dom.condition.textContent === "Cloudy" ? data.description : description(conditionLabel)
+    Dom.pressure.textContent = `${data.pressure}mb`
+    Dom.humidity.textContent = `${data.humidity}%`
+    Dom.latitude.textContent = `${data.latitude}°`
+    Dom.longitude.textContent = `${data.longitude}°`
+    return conditionLabel
+}
