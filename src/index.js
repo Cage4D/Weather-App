@@ -109,3 +109,8 @@ function changeBackgroundImg(background, condition) {
     const image = backgrounds[condition]
     background.style.background = `url(${image}) center center /  cover no-repeat`
 }
+
+const inputVal = Dom.input
+inputVal.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleInput(e)
+})
