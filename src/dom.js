@@ -12,6 +12,7 @@ const domElements = (function () {
   const hText = document.querySelector(".prop__longitude");
   const latText = document.querySelector(".prop__pressure");
   const lonText = document.querySelector(".prop__humidity");
+  const backgroundImg = document.querySelector("body")
 
   return {
     input,
@@ -27,6 +28,7 @@ const domElements = (function () {
     hText,
     latText,
     lonText,
+    backgroundImg
   };
 })();
 
