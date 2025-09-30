@@ -37,3 +37,8 @@ function cloudyOrSunny(temp) {
     const cel = convertFarenheitToCelsius(temp)
     return cel > 23 ? "Sunny" : "Cloudy"
 }
+
+function convertFarenheitToCelsius(temp) {
+    const celsius = Math.floor((5 * (parseInt(temp) - 32)) / 9)
+    return celsius
+}
