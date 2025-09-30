@@ -9,3 +9,16 @@ import Dom from "./dom.js"
 import cloudy from "../img/cloudy.jpg";
 import sunny from "../img/sunny.jpg";
 import rain from "../img/rain.jpg";
+
+async function handleInput(e) {
+    if (!e.target.value.trim()) return;
+    const data = await weatherData(e.target.value)
+    try {
+        const conditionData = updateDOM(data)
+        updateInfoClass(Dom, conditionData)
+        updatePropClass(Dom, conditionData)
+        changeBackgroundImg(Dom.backgroundImg, conditionData)
+    } catch (error) {
+        alert("Enter in a valid City, State or Country")
+    }
+}
