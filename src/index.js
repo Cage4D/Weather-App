@@ -42,3 +42,11 @@ function convertFarenheitToCelsius(temp) {
     const celsius = Math.floor((5 * (parseInt(temp) - 32)) / 9)
     return celsius
 }
+
+function description(text) {
+    if (text === "Sunny") {
+        return "Mostly sunny throughout the day with clear skies and warm temperatures."
+    } else if ( text === "Rainy") {
+        return "Cloudy throughout the day with periods of rain and possible thunderstorms"
+    }
+}
