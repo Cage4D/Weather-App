@@ -32,3 +32,8 @@ function checkWeatherCondition(condition, temp) {
     }
     return weatherCondition;
 }
+
+function cloudyOrSunny(temp) {
+    const cel = convertFarenheitToCelsius(temp)
+    return cel > 23 ? "Sunny" : "Cloudy"
+}
