@@ -63,3 +63,21 @@ function updateDOM(data) {
     Dom.longitude.textContent = `${data.longitude}°`
     return conditionLabel
 }
+
+function updateInfoClass(dom, condition) {
+    const infoClasses = ["info__cloudy", "info__rainy", "info__sunny"];
+    const domElements = [dom.location, dom.temperature, dom.condition, dom.description];
+    
+    for (const element of domElements) {
+        element.classList.remove(...infoClasses);
+    }
+    
+    let classToAdd;
+    if (condition === "Cloudy") classToAdd = "info__cloudy";
+    else if (condition === "Sunny") classToAdd = "info__sunny";
+    else classToAdd = "info__rainy";
+    
+    for (const element of domElements) {
+        element.classList.add(classToAdd);
+    }
+}
